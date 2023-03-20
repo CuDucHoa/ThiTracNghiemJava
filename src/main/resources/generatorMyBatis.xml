@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/DBThiTracNghiem"
+        userId="root"
+        password="cuduchoa2001">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.cuduchoa.ThiTracNghiem.model" targetProject="ThiTracNghiem"/>
+
+    <sqlMapGenerator targetPackage="com.cuduchoa.ThiTracNghiem.mapper.sql"  targetProject="ThiTracNghiem/src/main/resources/"/>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.cuduchoa.ThiTracNghiem.mapper"  targetProject="ThiTracNghiem"/>
+
+    <table tableName="classes" domainObjectName="Class" />
+    
+    <table tableName="subjects" domainObjectName="Subject" />
+    
+    <table tableName="nguoidung" domainObjectName="Nguoidung" />
+    
+    <table tableName="test" domainObjectName="Test" />
+    
+    <table tableName="question" domainObjectName="Question" />
+    
+    <table tableName="test_detail" domainObjectName="Test_detail" />
+    
+    <table tableName="result" domainObjectName="Result" />
+    
+    <table tableName="class_detail" domainObjectName="Class_detail" />
+
+  </context>
+</generatorConfiguration>
